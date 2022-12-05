@@ -69,7 +69,7 @@ function isLeapYear(year){
 }
 
 function getNextDate(date){
-    var day = date.day + 1;
+    var day = date.day + 1;  //increment the day
     var month = date.month;
     var year = date.year;
 
@@ -78,28 +78,31 @@ function getNextDate(date){
     if(month === 2){            
         //check for february
         if(isLeapYear(year)){
+            //check for leap year
             if(day > 29){
                 day = 1;
-                month++;
+                month++; // increment the month
             }
         }
         else{
             if(day > 28){
                 day = 1;
-                month++;
+                month++; // increment the month
             }
         }   
     }
+    // check for other months 
     else{
         //check if days exceeds max days in month
         if(day > daysInMonth[month - 1]){
             day = 1;
-            month++;
+            month++; //  increment the month
         }
     }
+    // increment the year if month is greayer than 12
     if(month > 12){
         month = 1;
-        year++;
+        year++; //  increment the year
     }
 
     return{
@@ -131,3 +134,5 @@ var date = {
 };
 
 console.log(getNextPalindromeDate(date));
+
+//done till 1:39 of video
