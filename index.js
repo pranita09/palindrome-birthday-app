@@ -116,7 +116,7 @@ function getNextDatePalindrome(date){
     var cntr = 0;      // counter to count next days to become palindrome
     var nextDate = getNextDate(date);
 
-    while(true){
+    for(;;){
         cntr++;
         var isPalindrome = checkPalindromeForAllDateFormats(nextDate);
         if(isPalindrome){
