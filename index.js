@@ -112,7 +112,7 @@ function getNextDate(date){
     }
 }
 
-function getNextPalindromeDate(date){
+function getNextDatePalindrome(date){
     var cntr = 0;      // counter to count next days to become palindrome
     var nextDate = getNextDate(date);
 
@@ -148,6 +148,6 @@ var date = {
     year: 2020
 };
 
-console.log(getNextPalindromeDate(date));
+console.log(getNextDatePalindrome(date));
 
 //done till 1:39 of video
