@@ -112,6 +112,21 @@ function getNextDate(date){
     }
 }
 
+function getNextPalindromeDate(date){
+    var cntr = 0;      // counter to count next days to become palindrome
+    var nextDate = getNextDate(date);
+
+    while(true){
+        cntr++;
+        var isPalindrome = checkPalindromeForAllDateFormats(nextDate);
+        if(isPalindrome){
+            break;
+        }
+        nextDate = getNextDate(date);
+    }
+    return [cntr, nextDate];
+}
+
 // function getNextPalindromeDate(date){
 //     var counter = 0;
 //     var nextDate = getNextDate(date);
@@ -129,7 +144,7 @@ function getNextDate(date){
 
 var date = {
     day: 31,
-    month: 8,
+    month: 12,
     year: 2020
 };
 
